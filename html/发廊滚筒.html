@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	*{margin:0;padding: 0}
+	.box{width:100px;height: 300px;border:1px solid #000;margin:100px auto;position:relative;}
+	.bar{width:300px;height: 300px;position:absolute;top:0;left:0;background: -webkit-repeating-linear-gradient(-45deg, red 0,red 20px,#fff 20px,#fff 40px,blue 40px,blue 60px,#fff 60px,#fff 80px)}
+</style>
+<script>
+	window.onload = function(){
+		var oBar = document.querySelector('.bar');
+		var left=0;
+		setInterval(function(){
+			left-=2;
+			oBar.style.left=left+'px';
+			if(oBar.offsetLeft<=-114){
+				left=0;
+			}
+		},16);
+	}
+</script>
+</head>
+<body>
+	<div class="box">
+		<div class="bar"></div>
+	</div>
+</body>
+</html>
