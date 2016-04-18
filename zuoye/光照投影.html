@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	*{margin: 0;padding: 0;}
+	body{overflow: hidden;}
+	.sun{width:150px;height: 150px;background: #F90;border-radius:50%;position: absolute;top:0;left:0;box-shadow: 0 0 100px #FF0; }
+	p{text-align: center;font-size: 50px;font-weight: bold;font-family: 'Microsoft Yahei';margin-top: 200px;text-shadow:0 0 0 #000;}
+</style>
+<script>
+	window.onload =function(){
+		var oSun = document.querySelector('.sun');
+		var oP=document.querySelector('p');
+		document.onmousemove=function(ev){
+			oSun.style.left=ev.pageX-oSun.offsetWidth/2+'px';
+			oSun.style.top=ev.pageY-oSun.offsetHeight/2+'px';
+			var disX=(oP.offsetLeft+oP.offsetWidth/2)-(oSun.offsetLeft+oSun.offsetWidth/2);
+			var disY=(oP.offsetTop+oP.offsetHeight/2)-(oSun.offsetTop+oSun.offsetHeight/2);
+			var c=Math.sqrt(disX*disX+disY*disY);
+			oP.style.textShadow=disX/2+'px 'disY/2+'px '+c/20+'px #000';
+		};
+	};
+</script>
+</head>
+<body>
+	<div class="sun"></div>
+	<p>北京欢迎你</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	*{margin: 0;padding: 0;}
+	body{background:#000;overflow: hidden;}
+	.box{width:200px;margin: 100px auto;position: relative;}
+	.box .top{width:100%;height: 270px;background: url(3.jpg) no-repeat;background-size:contain; }
+	.box .bottom{width:100%;height: 270px;position: absolute;left:0;top:275px;background: url(3.jpg) no-repeat;background-size:contain;-webkit-transform:scale(1,-1);-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 70%,rgba(0,0,0,0.5)); }
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="top"></div>
+	<div class="bottom"></div>
+</div>	
+</body>
+</html>

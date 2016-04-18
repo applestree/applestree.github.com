@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+
+	.div1{width:200px;height:200px;margin:100px auto;border-radius:50%;
+		background:-webkit-linear-gradient(0deg,purple,red);}
+</style>
+<script>
+	window.onload=function(){
+		var oDiv = document.querySelector('div');
+		var d= 0;
+		setInterval(function(){
+			d++;
+			oDiv.style.background ='-webkit-linear-gradient('+d+'deg,purple,red)';
+		},16);
+	};
+
+</script>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>
